@@ -1,4 +1,3 @@
-import { Component, createRef } from 'react';
 import { FiCheckSquare } from 'react-icons/fi';
 
 import { Form } from './styles';
@@ -15,7 +14,7 @@ interface ModalEditFoodProps {
 
 export default function ModalEditFood({ isOpen, setIsOpen, editingFood, handleUpdateFood  }: ModalEditFoodProps) {
 
-  const formRef = createRef<any>();
+  // const formRef = createRef<any>();
 
   async function handleSubmit(data: FoodType){
 
@@ -25,7 +24,7 @@ export default function ModalEditFood({ isOpen, setIsOpen, editingFood, handleUp
 
   return (
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
-      <Form ref={formRef} onSubmit={handleSubmit} initialData={editingFood}>
+      <Form onSubmit={handleSubmit} initialData={editingFood}>
         <h1>Editar Prato</h1>
         <Input name="image" placeholder="Cole o link aqui" />
 

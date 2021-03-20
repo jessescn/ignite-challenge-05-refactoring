@@ -3,6 +3,6 @@ export interface FoodType {
     name: string;
     description: string;
     price: number;
-    available: Boolean;
+    available: boolean;
     image: string;
 }
